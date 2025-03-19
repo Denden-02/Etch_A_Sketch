@@ -1,0 +1,31 @@
+/* 'DDC-FB (Disconnect-Facebook - Gagovernment)
+(Display, Dimension, Color, Font, Borders, Governing) 
+Governing: Specificity, Inheritance, Rule Order */
+
+body {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    background-color: beige;
+
+}
+h1, div.settings {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+button {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.main-container {
+    display: flex;
+    margin: 10px auto;
+    height: 90vh;
+    width: 70vw;
+    border: 11px solid rgb(161, 57, 57);
+    padding: 4px;
+}
+
+
