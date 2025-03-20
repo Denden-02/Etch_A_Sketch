@@ -4,7 +4,7 @@ Etch_A_Sketch PSEUDOCODE:
 
 - Create #main-container w/ Etch_A_Sketch header (Flexbox)
 
-- Make a Javascript function that produces 16x16 grid (default grid, own preferred size) on #main-container
+2) Make a Javascript function that produces 16x16 grid (default grid, own preferred size) on #main-container
 
 - Make a function that changes Grid box color on hover (color: blue)
 
