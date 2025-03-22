@@ -6,7 +6,7 @@ Etch_A_Sketch PSEUDOCODE:
 
 2) Make a Javascript function that produces 16x16 grid (default grid, own preferred size) on #main-container
 
-- Make a function that changes Grid box color on hover (color: blue)
+- TODO: Add an event listener on created boxes that changes Grid box color on hover (color: blue)
 
 - Create a button that asks for a prompt to change Grid box dimension
 
