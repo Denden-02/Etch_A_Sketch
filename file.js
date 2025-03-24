@@ -1,9 +1,16 @@
  // Logic Commit 3/24/25
-function clearGrid() {
-    document.querySelector(".main-container").innerHTML = "";
-}
+makeGrid();
+document.querySelectorAll(".hover-color").forEach(
+    function(node){
+        node.addEventListener("mouseover", colorBox(evt) {
+            evt.currentTarget.style.backgroundColor = "blue";
+        });
+    }
+);
 
- function makeGrid() {
+function 
+
+function makeGrid() {
     for (let i=0;i<256;++i) {
         let divSet = document.createElement("div")
 
@@ -13,21 +20,46 @@ function clearGrid() {
         let mainCont = document.querySelector(".main-container");
         mainCont.appendChild(divSet);
     };
-}
+};
 
-makeGrid();
-clearGrid()
+function clearGrid() {
+    document.querySelector(".main-container").innerHTML = "";
+};
 
-document.querySelectorAll(".hover-color").forEach(
-    function(node){
-        node.addEventListener("mouseover", colorBox);
-    }
-);
+function setGridSize() {
+    clearGrid();
 
-function colorBox(evt) {
-    evt.currentTarget.style.backgroundColor = "blue";
-    // alert(`${evt}`);
-}
+    main: while (true) {
+
+    var gridSize = Math.floor(Number(prompt("Select grid square size (Max: 100): ")));
+
+    if (Number.isInteger(gridSize)) {
+        if (gridSize < 100 && gridSize > 0 ) {
+            break main;
+            };
+    } else {
+        alert("Enter a valid number between 1-100");
+        continue main;
+        };  
+    };
+
+    // time to make a grid based on num pick
+    for (let i=0; i < (gridSize**2) ; ++i) {
+        let divSet = document.createElement("div")
+
+        divSet.style.cssText = `box-sizing: border-box; border: 1px solid black; flex-grow: 1; flex-shrink: 0; flex-basis: ${100/gridSize}%`
+        divSet.classList.add("hover-color");
+        
+        let mainCont = document.querySelector(".main-container");
+        mainCont.appendChild(divSet);
+    };
+};
+
+
+
+
+
+
 
 
 
