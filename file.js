@@ -1,14 +1,17 @@
  // Logic Commit 3/24/25
 makeGrid();
-document.querySelectorAll(".hover-color").forEach(
-    function(node){
-        node.addEventListener("mouseover", colorBox(evt) {
-            evt.currentTarget.style.backgroundColor = "blue";
-        });
-    }
-);
-
-function 
+hoverColor();
+ // Logic Commit 3/24/25 - merge next 2 block of functions and produce a function
+ 
+function hoverColor() {
+    document.querySelectorAll(".hover-color").forEach(
+        function(node){
+            node.addEventListener("mouseover", (evt) => {
+                evt.currentTarget.style.backgroundColor = "blue";
+            });
+        }
+    );
+};
 
 function makeGrid() {
     for (let i=0;i<256;++i) {
@@ -34,12 +37,15 @@ function setGridSize() {
     var gridSize = Math.floor(Number(prompt("Select grid square size (Max: 100): ")));
 
     if (Number.isInteger(gridSize)) {
-        if (gridSize < 100 && gridSize > 0 ) {
+        if (gridSize <= 100 && gridSize > 0 ) {
             break main;
-            };
+        } else {
+            alert("Enter a valid number between 1-100");
+            continue main;
+        };
     } else {
         alert("Enter a valid number between 1-100");
-        continue main;
+        continue;
         };  
     };
 
@@ -53,11 +59,10 @@ function setGridSize() {
         let mainCont = document.querySelector(".main-container");
         mainCont.appendChild(divSet);
     };
+
+    hoverColor();
 };
-
-
-
-
+ 
 
 
 
