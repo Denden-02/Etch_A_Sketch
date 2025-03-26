@@ -62,9 +62,32 @@ function setGridSize() {
 
     hoverColor();
 };
- 
 
-
-
+function hoverRandom() {
+    let boxes = document.querySelectorAll(".hover-color"); // a Nodelist
+    //logic commit 3/26/25
+    let opaq = 0.05;
+    // RNG max: 256
+    boxes.forEach(
+        function(node){
+            node.removeEventListener("mouseover", (evt) => {
+                evt.currentTarget.style.backgroundColor = "blue";
+            });
+        });
+    
+    boxes.forEach(        
+        function(node,index,array) {
+            let randColor = () => Math.floor(Math.random() * 257);
+            function opacity() {
+                if (opaq < 1) {
+                    opaq += 0.05
+                };
+                return opaq;
+            };
+            node.addEventListener("mouseover",(evt) => {
+                evt.currentTarget.style.backgroundColor = `rgba(${randColor()},${randColor()},${randColor()},${opacity()})`
+            });
+        });
+};
 
 

@@ -8,11 +8,12 @@ Etch_A_Sketch PSEUDOCODE:
 
 3) Add an event listener on created boxes that changes Grid box color on hover (color: blue)
 
-- Create a clearGrid function
+4) - Create a clearGrid function
 
-- TODO: Create a button that asks for a prompt to change Grid box dimension, and then change the Grid box to the selected dimension (max 100 per side)
+5) Create a button that asks for a prompt to change Grid box dimension, and then change the Grid box to the selected dimension (max 100 per side)
 
-- Create a button and a function that randomizes the hover color
-- Change color progression on hover to darker opacity by 10% each hover
+6)  Create a button and a function that randomizes the hover color
+7) TODO: Change color progression on hover to darker opacity by 5% each hover 
 
 - Add small UI changes on whole project
+    -  add a clean grid color reset on button press
