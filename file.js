@@ -64,10 +64,11 @@ function setGridSize() {
 };
 
 function hoverRandom() {
+
     let boxes = document.querySelectorAll(".hover-color"); // a Nodelist
-    //logic commit 3/26/25
     let opaq = 0.05;
-    // RNG max: 256
+
+    boxes.forEach((node) => {return node.style.backgroundColor = "";}) // color reset per click
     boxes.forEach(
         function(node){
             node.removeEventListener("mouseover", (evt) => {
@@ -77,7 +78,7 @@ function hoverRandom() {
     
     boxes.forEach(        
         function(node,index,array) {
-            let randColor = () => Math.floor(Math.random() * 257);
+            let randColor = () => Math.floor(Math.random() * 257); // RNG max: 256
             function opacity() {
                 if (opaq < 1) {
                     opaq += 0.05
